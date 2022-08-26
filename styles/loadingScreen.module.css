@@ -3,8 +3,24 @@
   height: 100vh;
   width: 100%;
   opacity: 0;
-  animation: fade 0.4s ease-in forwards;
-  background: black;
+  animation: fade 0.5s ease-in forwards;
+  background: #000000;
+  display: flex;
+  align-items: center;
+}
+
+.screen h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 1em;
+  letter-spacing: 1.5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(5%, 10%);
+  animation: slideIn 0.8s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .balls {
@@ -20,7 +36,7 @@
   width: 20px;
   border-radius: 50%;
   background: #1b5299;
-  
+
   margin: 0 6px 0 0;
   animation: oscillate 0.7s ease-in forwards infinite;
 }
@@ -56,5 +72,16 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0.4;
+    transform: translateX(30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(5%, 10%);
   }
 }
