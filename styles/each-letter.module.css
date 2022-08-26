@@ -1,0 +1,29 @@
+.wrapper {
+  border: 1px solid hsl(221, 14%, 31%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.letter {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.correct {
+  background: rgb(41, 136, 41);
+  color: #fff;
+  border: none;
+}
+
+.almost {
+  background: rgb(161, 161, 6);
+  border: none;
+}
+
+.incorrect {
+  background: gray;
+  color: #fff;
+  border: none;
+}

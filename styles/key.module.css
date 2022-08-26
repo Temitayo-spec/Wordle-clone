@@ -1,0 +1,31 @@
+.inner button {
+  padding: 0.5em;
+}
+
+.inner {
+  width: 100%;
+}
+
+.inner button {
+  padding: 0.8em;
+  background: hsl(30, 25%, 89%);
+  color: hsl(221, 14%, 31%);
+  font-size: 1.2em;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0px 2px hsl(28, 16%, 65%);
+  padding: 0.8em;
+}
+
+.disabled {
+  background: gray !important;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 760px) {
+  .inner button {
+    padding: 0.4em;
+  }
+}

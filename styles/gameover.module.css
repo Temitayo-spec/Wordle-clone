@@ -1,0 +1,33 @@
+.wrapper {
+  color: #fff;
+  text-align: center;
+  background: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  animation: slideUp 0.4s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wrapper h3 {
+  color: hsl(223, 31%, 20%);
+  font-size: 1.5em;
+  margin: 1em 0;
+}
+
+.wrapper h1 {
+  color: rgb(133, 100, 100);
+}
+
+.wrapper h1 span {
+  color: hsl(222, 26%, 31%);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}

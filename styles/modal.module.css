@@ -1,0 +1,89 @@
+.wrapper {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slideIn 0.5s linear cubic-bezier(0.19, 1, 0.22, 1);
+  animation-delay: 0.4s;
+}
+
+.bg {
+  background: rgba(0, 0, 0, 1);
+  opacity: 0.4;
+  z-index: 1;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+}
+
+.inner {
+  position: relative;
+  z-index: 30;
+  height: 40vh;
+  width: 50%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
+.icon {
+  font-size: 50px;
+  margin-bottom: 0.5em;
+}
+
+.inner h2 {
+  display: block;
+  color: hsl(6, 63%, 50%);
+  font-size: 2em;
+}
+
+.inner button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 1em;
+  background: gray;
+  border: none;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #fff;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(50px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .inner {
+    width: 90%;
+  }
+
+  .inner h2 {
+    font-size: 1.5em;
+    letter-spacing: 0.8px;
+  }
+}

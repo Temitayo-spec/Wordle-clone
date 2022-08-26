@@ -1,0 +1,134 @@
+.wrapper {
+  width: 100%;
+  margin: 1em auto;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner h2 {
+  font-size: 1.4em;
+  color: #fff;
+  font-weight: 400;
+  text-decoration: wavy underline;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+}
+
+.theme_two h4,
+.theme_two .theme__switcher_ctn p,
+.theme_two .numbering span {
+  color: hsl(60, 10%, 19%);
+}
+
+.theme_three h4,
+.theme_three .theme__switcher_ctn p,
+.theme_three .numbering span {
+  color: hsl(52, 100%, 62%);
+}
+
+.theme__switcher_ctn {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  flex: 1.2;
+  cursor: pointer;
+}
+
+.theme__switcher_ctn p {
+  font-size: 0.6em;
+  font-weight: 500;
+  color: #fff;
+  margin: auto 1.5em 0.6em;
+}
+
+.theme_switcher {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.numbering {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.numbering span {
+  color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.switcher {
+  height: 25px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.theme_two .switcher .switchers {
+  background: hsl(0, 5%, 81%);
+}
+
+.theme_three .switcher .switchers {
+  background: hsl(268, 71%, 12%);
+}
+
+.switchers {
+  background: hsl(223, 31%, 20%);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+}
+
+.active::after {
+  content: "";
+  background: hsl(6, 63%, 50%);
+  height: 65%;
+  width: 65%;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  transform: translate(30%, 25%);
+}
+
+.theme_two .active::after {
+  background: hsl(25, 98%, 40%);
+}
+.theme_three .active::after {
+  background: hsl(176, 100%, 44%);
+}
+
+.switchers:nth-child(1) {
+  border-radius: 20px 0 0 20px;
+}
+.switchers:nth-child(2) {
+  border-radius: none;
+}
+.switchers:nth-child(3) {
+  border-radius: 0 20px 20px 0;
+}
+
+.active:nth-child(3)::after {
+  transform: translate(20%, 25%);
+}
+
+.activate {
+  transform: translate(0);
+  transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+@media screen and (max-width: 450px) {
+  .theme__switcher_ctn {
+    flex: 2;
+  }
+}
