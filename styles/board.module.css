@@ -5,7 +5,7 @@
 .inner {
   display: grid;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 0.5em;
   background: hsl(0, 0%, 93%);
   width: 28%;
@@ -23,7 +23,7 @@
 
 @media screen and (max-width: 760px) {
   .inner {
-    width: 70%;
+    width: 60%;
     margin: 0.2em auto;
   }
   .inner .row {
